@@ -18,7 +18,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>com.hipo_delivery_be.App</start-class>
+        <start-class>com.hipo.delivery.HipoDeliveryApplication</start-class>
         <java.version>17</java.version>
         <docker.image.prefix>${user.name}</docker.image.prefix>
     </properties>
