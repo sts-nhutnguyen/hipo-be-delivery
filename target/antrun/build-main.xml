@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="main"  >
-<target name="main">
-  <zip destfile="C:\Users\quyen.nguyen\Documents\hipo-be-delivery\target/app.zip">
-    <zipfileset dir="C:\Users\quyen.nguyen\Documents\hipo-be-delivery\target/docker"/>
-    <zipfileset includes="hipo-be-delivery.jar" dir="C:\Users\quyen.nguyen\Documents\hipo-be-delivery\target"/>
-  </zip>
-</target>
-</project>

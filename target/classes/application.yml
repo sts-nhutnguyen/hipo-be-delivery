@@ -1,9 +1,0 @@
-# See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
-spring:
-  thymeleaf.cache: false
-
-server:
-  port: 8081
-
-logging:
-  file: /logs/hipo_delivery_app.log
