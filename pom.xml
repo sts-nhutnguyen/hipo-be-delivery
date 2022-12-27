@@ -38,6 +38,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
@@ -75,7 +76,7 @@
                             <outputDirectory>${project.build.directory}/docker</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/docker</directory>
+                                    <directory>docker</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
@@ -97,6 +98,8 @@
                         <configuration>
                             <sourceFile>${project.build.directory}/docker/Dockerfile</sourceFile>
                             <destinationFile>${project.build.directory}/docker/Dockerfile</destinationFile>
+                            <sourceFile>${project.build.directory}/${project.build.finalName}.jar</sourceFile>
+                            <destinationFile>${project.build.directory}/docker/${project.build.finalName}.jar</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
@@ -116,7 +119,6 @@
                             <target>
                                 <zip destfile="${project.build.directory}/app.zip">
                                     <zipfileset dir="${project.build.directory}/docker" />
-                                    <zipfileset dir="${project.build.directory}" includes="${project.artifactId}.jar" />
                                 </zip>
                             </target>
                         </configuration>
